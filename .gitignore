@@ -3,3 +3,4 @@ __pycache__/
 *.pyc
 MySQL/data/*.tsv
 *.tsv
+.env
