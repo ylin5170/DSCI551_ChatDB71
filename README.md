@@ -1,6 +1,8 @@
 # DSCI551_ChatDB71
 This repository is for our DSCI551 ChatDB 71 group project 
+
 Overview
+
 This project enables natural language interaction with a MongoDB movie database using OpenAI's GPT-based model. Users can perform data queries, mutations (insert/update/delete), and schema exploration by typing conversational inputs.
 
 Prerequisites
