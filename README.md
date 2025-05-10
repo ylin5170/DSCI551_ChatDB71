@@ -4,7 +4,7 @@ This repository contains the codebase for our DSCI551 ChatDB Group 71 project, w
 
 ---
 
-## 📚 Overview
+## Overview
 
 This project provides a Natural Language Interface (NLI) that translates user input into SQL or MongoDB queries. It supports:
 
@@ -12,14 +12,14 @@ This project provides a Natural Language Interface (NLI) that translates user in
 - Schema exploration
 - Data mutation (insert, update, delete)
 
-### 💾 Databases Used
+### Databases Used
 
 - **MySQL**: Stores structured data such as movie titles, ratings, and crew.
 - **MongoDB**: Manages localized and alias movie data from `title.akas.tsv`.
 
 ---
 
-## 🛠️ Prerequisites
+## Prerequisites
 
 - Python 3.8+
 - pip / virtualenv
@@ -27,7 +27,7 @@ This project provides a Natural Language Interface (NLI) that translates user in
 - MongoDB installed and running locally (on `localhost:27017`)
 - Access to [OpenAI GPT-3.5 API](https://platform.openai.com/account/api-keys)
 
-### 📦 Dataset Access
+### Dataset Access
 
 Due to GitHub’s file size limit, datasets are hosted on Google Drive:
 
@@ -36,9 +36,9 @@ Due to GitHub’s file size limit, datasets are hosted on Google Drive:
 
 ---
 
-## 🚀 Setup Instructions
+## Setup Instructions
 
-### 🔹 MySQL Component (by Eason Lin)
+### MySQL Component (by Eason Lin)
 
 ```bash
 cd MySQL
