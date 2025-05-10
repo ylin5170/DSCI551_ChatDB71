@@ -1,60 +1,47 @@
 # DSCI551_ChatDB71
-This repository is for our DSCI551 ChatDB 71 group project 
 
-Overview
+This repository contains the codebase for our DSCI551 ChatDB Group 71 project, which enables natural language querying of movie metadata using both **MySQL** and **MongoDB**, powered by OpenAI's GPT-3.5.
 
-This project enables natural language interaction with a MongoDB movie database using OpenAI's GPT-based model. Users can perform data queries, mutations (insert/update/delete), and schema exploration by typing conversational inputs.
+---
 
-Prerequisites
-Make sure the following tools are installed:
+## 📚 Overview
 
-Python 3.8+
+This project provides a Natural Language Interface (NLI) that translates user input into SQL or MongoDB queries. It supports:
 
-MongoDB running locally (localhost:27017) with title_basics, title_akas, and title_ratings collections imported
+- Data querying
+- Schema exploration
+- Data mutation (insert, update, delete)
 
-OpenAI API access (GPT-3.5-Turbo)
+### 💾 Databases Used
 
-pip / virtualenv or conda (for environment setup)
+- **MySQL**: Stores structured data such as movie titles, ratings, and crew.
+- **MongoDB**: Manages localized and alias movie data from `title.akas.tsv`.
 
+---
 
-Due to GitHub's file size limitations, the full IMDB .tsv dataset used in this project has been uploaded to Google Drive.
-https://drive.google.com/drive/folders/17uRg72ne2JSUxMDWCgnb6Jzpj58EKrdN?usp=sharing
-Installation Steps
-1.Clone the Repository
-2.Create and Activate Virtual Environment
-3.Install Required Dependencies
+## 🛠️ Prerequisites
+
+- Python 3.8+
+- pip / virtualenv
+- MySQL installed and running locally
+- MongoDB installed and running locally (on `localhost:27017`)
+- Access to [OpenAI GPT-3.5 API](https://platform.openai.com/account/api-keys)
+
+### 📦 Dataset Access
+
+Due to GitHub’s file size limit, datasets are hosted on Google Drive:
+
+- **MySQL**: [Download data.zip](https://drive.google.com/drive/folders/1wFFFx37nBeJFPEnGqU0D5iy4GDnKn_lk?usp=sharing)
+- **MongoDB**: [Download TSV files](https://drive.google.com/drive/folders/17uRg72ne2JSUxMDWCgnb6Jzpj58EKrdN?usp=sharing)
+
+---
+
+## 🚀 Setup Instructions
+
+### 🔹 MySQL Component (by Eason Lin)
+
+```bash
+cd MySQL
+python3 -m venv venv
+source venv/bin/activate
 pip install -r requirements.txt
-4.Add Your OpenAI API Key
-5.Import MongoDB Data
-Make sure title_basics, title_akas, and title_ratings are loaded into MongoDB.
-
-Running the System
-Start the terminal interface:
-python main.py
-
-You'll be prompted with:
-Welcome to ChatDB (Mongo Edition)!
-What would you like to do?
-
-You can try examples like:
-
-Show me the top 5 Japanese movies
-
-Add a US English alias "Demo Movie" for tt0000001
-
-Change the language of alias for tt0000001 to French
-
-Delete the Chinese alias for tt0000001
-
-Show samples from title_akas
-
-Project Structure
-main.py – Command line interface
-
-query_parser.py – Converts NL queries to MongoDB pipelines
-
-mutation_parser.py – Converts NL instructions into insert/update/delete actions
-
-parser.py – Dispatches query or mutation routes
-
-import_data.py – Optional utility for loading IMDB CSV data
