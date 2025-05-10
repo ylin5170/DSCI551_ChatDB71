@@ -1,12 +1,3 @@
-# mutation_parser.py
-"""
-Natural-language → MongoDB mutations for title_akas collection
-------------------------------------------------------------
-• Uses OpenAI SDK v1
-• Strict JSON only (double-quoted)
-• Validates update data before calling update_one
-• Logs raw LLM output for debugging
-"""
 
 from openai import OpenAI
 from pymongo import MongoClient

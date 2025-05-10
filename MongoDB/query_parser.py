@@ -1,11 +1,3 @@
-# query_parser.py
-"""
-Natural-language → MongoDB aggregation pipeline for IMDb data
-• Handles region joins, year casting, vote / rating filters
-• Uses OpenAI SDK v1 with strict-JSON responses
-• Logs raw pipeline for debugging
-"""
-
 from openai import OpenAI
 from pymongo import MongoClient
 import re
